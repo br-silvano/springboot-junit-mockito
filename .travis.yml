@@ -1,0 +1,7 @@
+jdk: openjdk13
+script:
+  - jdk_switcher use openjdk13
+  - # do stuff with OpenJDK 13
+  - export JAVA_HOME=$HOME/openjdk13
+  - $TRAVIS_BUILD_DIR/install-jdk.sh --install openjdk13 --target $JAVA_HOME
+  - # do stuff with open OpenJDK 13
