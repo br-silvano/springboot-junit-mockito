@@ -1,4 +1,5 @@
-# springboot-junit-mockito ![alt text](https://travis-ci.org/br-silvano/springboot-junit-mockito.svg?branch=master)
+# springboot-junit-mockito [![Build Status](https://travis-ci.org/br-silvano/springboot-junit-mockito.svg?branch=master)](https://travis-ci.org/br-silvano/springboot-junit-mockito)
+
 Mostra como usar JUnit 5 e Mockito 3 para Teste de Unidade e Teste de Integração com o Spring Boot 2.
 
 ![alt text](imgs/mockito-junit5-logo3-horiz.png)
