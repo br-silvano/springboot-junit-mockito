@@ -100,6 +100,9 @@
 					<target>13</target>
 			  		<showWarnings>true</showWarnings>
                     <showDeprecation>true</showDeprecation>
+                    <compilerArgs>
+					    <arg>-Xpkginfo:always</arg>
+					</compilerArgs>
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -108,6 +111,14 @@
                         <version>7.2</version> 
                     </dependency>
                 </dependencies>
+			</plugin>
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-resources-plugin</artifactId>
+			    <version>3.1.0</version>
+			    <configuration>
+			        <overwrite>false</overwrite>
+			    </configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
