@@ -16,6 +16,7 @@
 
 	<properties>
 		<java.version>13</java.version>
+		<maven-compiler-pluging.version>3.8.1</maven-compiler-pluging.version>
 	</properties>
 
 	<dependencies>
@@ -92,12 +93,21 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 			  	<artifactId>maven-compiler-plugin</artifactId>
-			  	<version>3.8.1</version>
+			  	<version>${maven-compiler-pluging.version}</version>
 			  	<configuration>
 			  		<useIncrementalCompilation>false</useIncrementalCompilation>		  		
 					<source>13</source>
 					<target>13</target>
-			  	</configuration>
+			  		<showWarnings>true</showWarnings>
+                    <showDeprecation>true</showDeprecation>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.ow2.asm</groupId>
+                        <artifactId>asm</artifactId>
+                        <version>7.2</version> 
+                    </dependency>
+                </dependencies>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
