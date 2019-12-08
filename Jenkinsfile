@@ -6,6 +6,14 @@ pipeline {
         }
     }
     stages {
+    	stage("first") {
+		    tools {
+		       jdk "jdk-13.0.1"
+		    }
+		    steps {
+		        sh 'java -version'
+		    }
+		}
         stage('Build') { 
             steps {
                 sh 'mvn -B -DskipTests clean package' 
