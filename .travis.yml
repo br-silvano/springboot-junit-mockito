@@ -4,10 +4,4 @@ script:
  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 jdk:
  - oraclejdk13
-deploy:
-  provider: heroku
-  api_key:
-    secure: auTdzbadWRVJmmm2QcEUVORNYl/uUPhv/na+Vh2Mx8Pyy/bFJSI0KAvY19ACrx9DpZSV/4qa0LeLR348scyGN2BPyqEtGobzKoQhoNiE2+4C8fbv3ZxUSjhTmY2x/316yhS5H/0cQP7U4r+arLhsMcAVoMkXorSFK9XkhBFuP5vc7zYOaL+VQe6hR7VIxWwBvlRHQ2P1fp0AXaUBmA765BBi8ZHB3bPxVflpBghf0evDehWhBI0v/h46OxPfPL4We4DZSkAEACQs/OQqVTl61mX3gGVIRSJOgNrZ4XHEL2XndMulmzd7xtvdrxAewlwi5O1o6oiD/yKvn5UkLEVnTHVOEtz779bdYZlD1Nf0KFyGq2OqSHEsgB8uU+gFIltJZEjmsxu4W90tqMLac/K08S7uogfDrtpwgSTZtWBFj7zWJV/DeAcvLgzsJgNG5/C3Qbmc5FeVpIE3mRpn1FA3MpQZI8dkxp+Xez8kUkA0XW/FNpWtRFY9XdrcMHxxR2kRWK7+pezESdIaJjtqWLjiKl/to+n0nA6ZRR3e/+JB6m1TBi3sV5yRaU/93/aKa0+Llyw45HOujjPwpP/TCcJkXc46LdEnIVeQmqNs3tboxXuhWHo7zHRiSX3B8JkyzwteQAWoFl6RhkAxcKqlopTDCM+JnIHMtw7D8I1mBTiew3w=
-  app: springboot-junit-mockito
-  on:
-    repo: br-silvano/springboot-junit-mockito
+
