@@ -1,7 +1,10 @@
 language: java
 script:
- - mvn test
- - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+- mvn test
+- mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 jdk:
- - oraclejdk13
-
+- oraclejdk13
+deploy:
+  provider: heroku
+  api_key:
+    secure: MYy7tS1ZzCWSktSZSPthvGRazX2fPeTr6oiiopIsV4UTYYmmUQxQ7bfniY+cCyPOXV6BNZh1pOEjR3wirKNjKvuRWkQ1Scg15+m26/SH2YiTrX7jVANCtaz5obeVnJ5lL0Ne5/tOKTUpN2lleTWx9i+bwogdoUH7yRu1wrrJKrCLC9KwRpW9ST/EIqOoDO1SyB8mTYGRvgc1qmyOAM5KSAnT3c/lZc9+HfzOnpSgFSTeiA7KkdAi4TBoS15F4TdGuFcq2CgWqP/IwOj66W9XTBW1BL6RcgE66haKVmFqE7DUIODCk+t9QDRXYF9dveuOmyaOT8kFFCN5Mt0SukOy8Sn6KAHno5sCL3IFzyk/rg9KPDrWe/ov/NLG2Onp382jvbhe1YHw9gCDhl+8JN6/5zVkQO/6kKlha6nHwOM3OhyLnr9DweFhJTXFMXONcu/jUa6hSTiGrlqOFoPK75Lw8tdSEGboaVMk2JK67MvHHDL9dm/HUH8gpofUq52z6X/eTpRR8aM/yDV3Y7A10y/pOjxdymo6Vi4zNGn0mHkarZ7uzDEgKfu7YqQQNnNYr+mDewGEBI5NmaHNvWhOIxsK/piqyBDakKIBdC/u09oMlll1pOUy8EDqRjf+HqepmYC9LcnLpdPNvAbk7BU+7ocpvA3beuJTv+0IMIxTEjLcJsU=
