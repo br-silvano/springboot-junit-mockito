@@ -1,4 +1,7 @@
 pipeline {
+    tools {
+        jdk "jdk13"
+    }
     agent {
         docker {
             image 'maven:3-alpine' 
