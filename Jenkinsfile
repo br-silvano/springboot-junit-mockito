@@ -7,17 +7,11 @@ pipeline {
     }
     stages {
         stage('Build') {
-            tools {
-                jdk "jdk13"
-            }
             steps {
                 sh './mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V' 
             }
         }
         stage('Test') {
-            tools {
-                jdk "jdk13"
-            }
             steps {
                 sh 'mvn test'
             }
@@ -28,9 +22,6 @@ pipeline {
             }
         }
         stage('Deliver') {
-            tools {
-                jdk "jdk13"
-            }
             steps {
                 sh './jenkins/scripts/deliver.sh'
             }
