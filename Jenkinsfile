@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh './mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V' 
+                sh 'mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V' 
             }
         }
         stage('Test') {
