@@ -2,13 +2,14 @@ pipeline {
     agent {
         docker {
             image 'maven:3-alpine' 
-            args '-v /root/.m2:/root/.m2' 
+            args '-v /root/.m2:/root/.m2'
+            args '-v $HOME/tools:/var/lib/jenkins/tools' 
         }
     }
     stages {
         stage('Build') {
             steps {
-                sh './mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V' 
+                sh 'mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V' 
             }
         }
         stage('Test') {
