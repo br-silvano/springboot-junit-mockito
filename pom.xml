@@ -90,9 +90,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-			        <argLine>--enable-preview</argLine>
-			    </configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -101,26 +98,17 @@
 			  	<configuration>
 					<source>${maven-compiler-plugin.configuration.source}</source>
 					<target>${maven-compiler-plugin.configuration.source}</target>
-                    <compilerArgs>
-			            --enable-preview
-			        </compilerArgs>
                 </configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 			  	<artifactId>maven-surefire-plugin</artifactId>
 			  	<version>2.22.2</version>
-			  	<configuration>
-			        <argLine>--enable-preview</argLine>
-			    </configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 			    <artifactId>maven-failsafe-plugin</artifactId>
 			    <version>2.22.2</version>
-			    <configuration>
-			        <argLine>--enable-preview</argLine>
-			    </configuration>
 			</plugin>
 			<plugin>
 		        <!-- Build an executable JAR -->
@@ -128,7 +116,6 @@
 		        <artifactId>maven-jar-plugin</artifactId>
 		        <version>3.1.2</version>
 		        <configuration>
-		        	<argLine>--enable-preview</argLine>
 		        	<archive>
 		            	<manifest>
 		              		<addClasspath>true</addClasspath>
